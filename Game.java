@@ -69,7 +69,7 @@ public class Game {
     }
 
     // Checks how many times a correct letter appears in the word
-    private int checkTimesFound(String letter, String[] letters) {
+    int checkTimesFound(String letter, String[] letters) {
         int times = 0;
         for (String let : letters) {
             if (let.equals(letter)) {

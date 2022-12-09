@@ -17,6 +17,22 @@ public class UnitTest {
     }
 
     @Test
+    public void cp_08(){
+        String[] letters = {"o","u","t","d","o","o","r"};
+        String letter = "o";
+        assertEquals(3, new Game("outdoors").checkTimesFound(letter, letters));
+    }
+
+    @Test
+    public void cp_10(){
+        LetterInput expectInput = new LetterInput();
+        String input = "y";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+        assertTrue(new PlayAgain().wannaPlay());
+    }
+
+    @Test
     public void cp_12() {
         LetterInput inputOutput= new LetterInput();
 
@@ -36,6 +52,12 @@ public class UnitTest {
         System.setIn(in);
 
         assertEquals("e", inputOutput.input());
+    }
+////////Test 15
+    @Test
+    public void cp_15(){
+        String esperado = "Is h present in word? --> Yes";
+        assertEquals(esperado, new Printer().printIsLetterPresent("h", true));
     }
 
 }
