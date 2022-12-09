@@ -6,6 +6,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import org.junit.Test;
 
@@ -53,11 +54,32 @@ public class UnitTest {
 
         assertEquals("e", inputOutput.input());
     }
+
+    @Test
+    public void cp_14() {
+        String output = " a _ o _ a l _ _ s ";
+        ArrayList<String> foundLetters;
+        foundLetters = new ArrayList<String>();
+        foundLetters.add("a");
+        foundLetters.add("l");
+        foundLetters.add("s");
+        foundLetters.add("o");
+
+        
+        assertEquals(output, new Printer().printWord(foundLetters, "anomalies"));
+    }
+
 ////////Test 15
     @Test
     public void cp_15(){
         String esperado = "Is h present in word? --> Yes";
         assertEquals(esperado, new Printer().printIsLetterPresent("h", true));
+    }
+
+    @Test
+    public void cp_16(){
+        String output = "Is m present in word? --> No";
+        assertEquals(output, new Printer().printIsLetterPresent("m", false));
     }
 
 }

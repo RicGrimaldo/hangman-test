@@ -24,7 +24,7 @@ class Printer {
     }
 
     // Update word changing blanks with found letters
-    void printWord(ArrayList<String> foundLetters, String word) {
+    String printWord(ArrayList<String> foundLetters, String word) {
         String output = "";
 
         for (int i = 0; i < word.length(); i++) {
@@ -36,7 +36,7 @@ class Printer {
 
         }
 
-        System.out.println(output);
+        return output;
     }
 
     // Print whether letter is present in word
