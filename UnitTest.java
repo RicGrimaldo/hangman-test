@@ -34,9 +34,24 @@ public class UnitTest {
     }
 
     @Test
+    public void cp_05() {
+        String letter = "h";
+        String[] letters = {"h","o","m","e","w","o","r","k"};
+
+        assertTrue(new Game("test").checkLetter(letter, letters));
+    }
+
+    @Test
     public void cp_06() {
         String[] letters = {"h","o","m","e","w","o","r","k"};
         assertFalse(new Game("t").checkLetter("t", letters));
+    }
+
+    @Test
+    public void cp_07(){
+        String[] letters = {"p", "o", "o", "l"};
+        String letter = "p";
+        assertEquals(1, new Game("outdoors").checkTimesFound(letter, letters));
     }
 
     @Test
