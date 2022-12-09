@@ -18,6 +18,11 @@ public class UnitTest {
     }
 
     @Test
+    public void cp_02() {
+        assertFalse( new Game("e").checkIfLetter("3"));
+    }
+
+    @Test
     public void cp_03() {
         String letter = "f";
         ArrayList<String> letters = new ArrayList<>(Arrays.asList("a", "f", "p", "w"));
