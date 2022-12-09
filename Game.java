@@ -42,7 +42,7 @@ public class Game {
     }
 
     // Checks if letter has been entered before
-    private boolean checkIfEntered(String letter, ArrayList<String> enteredLetters) {
+    boolean checkIfEntered(String letter, ArrayList<String> enteredLetters) {
         boolean entered = false;
         for (String let : enteredLetters) {
             if (let.equals(letter)) {
@@ -81,7 +81,7 @@ public class Game {
     }
 
     // Adds letter to arraylist
-    private void addLetter(String letter, ArrayList<String> letters) {
+    void addLetter(String letter, ArrayList<String> letters) {
         letters.add(letter);
     }
 

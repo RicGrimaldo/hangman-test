@@ -1,6 +1,4 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import java.beans.Transient;
 import java.io.ByteArrayInputStream;
@@ -8,6 +6,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.junit.Test;
 
@@ -19,9 +18,25 @@ public class UnitTest {
     }
 
     @Test
+    public void cp_03() {
+        String letter = "f";
+        ArrayList<String> letters = new ArrayList<>(Arrays.asList("a", "f", "p", "w"));
+
+        assertTrue(new Game("test").checkIfEntered(letter, letters));
+    }
+
+    @Test
+    public void cp_04() {
+        String letter = "r";
+        ArrayList<String> letters = new ArrayList<>(Arrays.asList("a", "f", "p", "w"));
+
+        assertFalse(new Game("test").checkIfEntered(letter, letters));
+    }
+
+    @Test
     public void cp_06() {
         String[] letters = {"h","o","m","e","w","o","r","k"};
-        assertFalse(new Game(null).checkLetter("t", letters));
+        assertFalse(new Game("t").checkLetter("t", letters));
     }
 
     @Test
@@ -29,6 +44,16 @@ public class UnitTest {
         String[] letters = {"o","u","t","d","o","o","r"};
         String letter = "o";
         assertEquals(3, new Game("outdoors").checkTimesFound(letter, letters));
+    }
+
+    @Test
+    public void cp_09() {
+        String letter = "d";
+        ArrayList<String> letters = new ArrayList<>(Arrays.asList("o", "t", "u"));
+        ArrayList<String> expectedLetters = new ArrayList<>(Arrays.asList("o", "t", "u", "d"));
+
+        new Game("test").addLetter(letter, letters);
+        assertTrue(letters.equals(expectedLetters));
     }
     
     @Test
