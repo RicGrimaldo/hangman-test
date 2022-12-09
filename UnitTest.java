@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.beans.Transient;
@@ -14,6 +15,20 @@ public class UnitTest {
     @Test
     public void cp_01() {
         assertTrue( new Game("e").checkIfLetter("e"));
+    }
+
+    @Test
+    public void cp_06() {
+        String[] letters = {"h","o","m","e","w","o","r","k"};
+        assertFalse(new Game(null).checkLetter("t", letters));
+    }
+
+    @Test
+    public void cp_11(){
+        String input = "l";
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+        assertFalse(new PlayAgain().wannaPlay());
     }
 
     @Test

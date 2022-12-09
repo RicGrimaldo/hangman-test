@@ -54,7 +54,7 @@ public class Game {
     }
 
     // Checks if letter input is present in word
-    private boolean checkLetter(String letter, String[] letters) {
+    boolean checkLetter(String letter, String[] letters) {
         boolean found = false;
 
         for (String let : letters) {
