@@ -52,5 +52,11 @@ public class UnitTest {
 
         assertEquals("e", inputOutput.input());
     }
+////////Test 15
+    @Test
+    public void cp_15(){
+        String esperado = "Is h present in word? --> Yes";
+        assertEquals(esperado, new Printer().printIsLetterPresent("h", true));
+    }
 
 }

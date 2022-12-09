@@ -40,15 +40,17 @@ class Printer {
     }
 
     // Print whether letter is present in word
-    void printIsLetterPresent(String letter, boolean result) {
+    String printIsLetterPresent(String letter, boolean result) {
         String yesOrNo = "";
-
+        String resultante = "";
         if (result == true) {
             yesOrNo = "Yes";
         } else {
             yesOrNo = "No";
         }
         System.out.println("Is " + letter + " present in word? --> " + yesOrNo);
+        resultante = "Is " + letter + " present in word? --> " + yesOrNo;
+        return resultante;
     }
 
     // Print the list of the found letters and the list of the wrong letters
