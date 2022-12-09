@@ -97,7 +97,7 @@ public class UnitTest {
 
     @Test
     public void cp_14() {
-        String output = " a _ o _ a l _ _ s ";
+        String output = "a _ o _ a l _ _ s ";
         ArrayList<String> foundLetters;
         foundLetters = new ArrayList<String>();
         foundLetters.add("a");

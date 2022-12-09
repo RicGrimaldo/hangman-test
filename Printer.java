@@ -35,7 +35,7 @@ class Printer {
             }
 
         }
-
+        System.out.println(output);
         return output;
     }
 
