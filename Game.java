@@ -32,7 +32,7 @@ public class Game {
     }
 
     // Check if input is letter
-    private boolean checkIfLetter(String letter) {
+    boolean checkIfLetter(String letter) {
         boolean isLetter = false;
 
         if (letter.matches("[a-zA-Z]+")) {
